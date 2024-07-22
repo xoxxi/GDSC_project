@@ -12,17 +12,23 @@ app.get('/', (req, res) => {
   res.send('Sudoku Solver API');
 });
 
-
 app.post('/api/solve', (req, res) => {
   const puzzle = req.body.puzzle;
+  console.log('Received puzzle:', puzzle); // 퍼즐 입력 로그
 
   if (!isValidPuzzle(puzzle)) {
+    console.error('Invalid puzzle format');
     return res.status(400).json({ error: 'Invalid puzzle format' });
   }
 
-  const solution = solveSudoku(puzzle);
-
-  res.json({ solution });
+  try {
+    const solution = solveSudoku(puzzle);
+    console.log('Solved puzzle:', solution); // 퍼즐 해결 로그
+    res.json({ solution });
+  } catch (error) {
+    console.error('Error solving puzzle:', error);
+    res.status(500).json({ error: 'Failed to solve puzzle' });
+  }
 });
 
 
