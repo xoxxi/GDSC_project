@@ -7,6 +7,12 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// 루트 경로 핸들러 추가
+app.get('/', (req, res) => {
+  res.send('Sudoku Solver API');
+});
+
+
 app.post('/api/solve', (req, res) => {
   const puzzle = req.body.puzzle;
 
