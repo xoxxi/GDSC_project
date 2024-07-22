@@ -19,6 +19,13 @@ app.post('/api/solve', (req, res) => {
   res.json({ solution });
 });
 
+// 정적 파일 제공 설정
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 /* app.get('/api/generate', (req, res) => {
   try {
