@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
       displaySolution(solution);
     } catch (error) {
       console.error('Network error:', error);
+      alert('Network error: ' + error.message);
     }
   }
 
