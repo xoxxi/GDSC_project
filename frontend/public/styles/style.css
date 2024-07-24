@@ -57,11 +57,11 @@ input {
 }
 
 #sudoku-table td:nth-child(3n) {
-  border-right-width: 5px;
+  border-right-width: 3x;
 }
 
 #sudoku-table tr:nth-child(3n+1) td {
-  border-top-width: 3px;
+  border-top-width: 2px;
 }
 
 #sudoku-table tr:nth-child(3n) td {
