@@ -5,7 +5,7 @@ const { solveSudoku, isValidPuzzle } = require('./sudokuSolver');
 
 const app = express();
 app.use(cors({
-  origin: 'https://sudokuununun.netlify.app',
+  origin: 'https://sdkuou.netlify.app',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
