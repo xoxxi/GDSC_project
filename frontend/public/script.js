@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const tr = document.createElement('tr');
       for (let col = 0; col < 9; col++) {
         const td = document.createElement('td');
-        td.textContent = solution[row][col];
+        td.textContent = solution[row][col] === 0 ? '' : solution[row][col];
         tr.appendChild(td);
       }
       tableBody.appendChild(tr);
