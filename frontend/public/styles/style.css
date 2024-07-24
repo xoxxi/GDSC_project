@@ -20,12 +20,13 @@ body {
 
 table {
   border-collapse: collapse;
-  margin: auto;
+  margin: 0 auto;
+  border-spacing: 0;
 }
 
 td, input {
-  width: 40px; /* 더 넓은 그리드 */
-  height: 40px; /* 더 넓은 그리드 */
+  width: 40px;
+  height: 40px; 
   text-align: center;
   font-size: 18px;
 }
