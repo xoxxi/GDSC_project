@@ -4,7 +4,11 @@ const cors = require('cors');
 const { solveSudoku, isValidPuzzle } = require('./sudokuSolver');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://sudokuununun.netlify.app',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(bodyParser.json());
 
 // 루트 경로 핸들러 추가
