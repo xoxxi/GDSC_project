@@ -5,7 +5,7 @@ const { solveSudoku, isValidPuzzle } = require('./sudokuSolver');
 
 const app = express();
 app.use(cors({
-  origin: 'https://sudoku-0y1f.onrender.com/',
+  origin: 'https://sudoku-0y1f.onrender.com',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
