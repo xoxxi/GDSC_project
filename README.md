@@ -8,7 +8,7 @@
 - 김민지(Backend)
 
 ## 🛠 기술 스택 (Tech Stack)
-Frontend: JavaScript (React.js), HTML, CSS
+Frontend: JavaScript, HTML, CSS
 
 Backend: Node.js
 
