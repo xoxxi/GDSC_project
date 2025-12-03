@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // 퍼즐 제출 함수
   async function submitPuzzle(puzzle) {
-    const backendUrl = 'https://port-0-sudoku-backend-lywjjuocf092590d.sel4.cloudtype.app/api/solve';
+    const backendUrl = 'https://gdsc-project-f5no.onrender.com/api/solve';
     try {
       const response = await fetch(backendUrl, {
         method: 'POST',
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // 랜덤 퍼즐 요청 함수
   async function generateRandomPuzzle() {
-    const backendUrl = 'https://port-0-sudoku-backend-lywjjuocf092590d.sel4.cloudtype.app/api/generate';
+    const backendUrl = 'https://gdsc-project-f5no.onrender.com/api/generate';
     try {
       const response = await fetch(backendUrl);
 
