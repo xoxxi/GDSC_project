@@ -130,7 +130,7 @@ function isValidPuzzle(puzzle) {
       puzzle[row][col] = 0;
     }
   
-    return JSON.stringify(puzzle);
+    return puzzle
   }
   
-  module.exports = { solveSudoku, isValidPuzzle };
+module.exports = { solveSudoku, isValidPuzzle, generateRandomPuzzle };
