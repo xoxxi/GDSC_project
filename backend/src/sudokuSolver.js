@@ -116,21 +116,20 @@ function isValidPuzzle(puzzle) {
     }
   
     fillDiagonal();
-    solveSudoku(puzzle); // solveSudoku 함수 호출
-  
-    //Remove some elements to create the puzzle
-    const removalCount = 40; // Number of elements to remove for the puzzle
-    for (let i = 0; i < removalCount; i++) {
-      let row = Math.floor(Math.random() * 9);
-      let col = Math.floor(Math.random() * 9);
-      while (puzzle[row][col] === 0) {
-        row = Math.floor(Math.random() * 9);
-        col = Math.floor(Math.random() * 9);
-      }
-      puzzle[row][col] = 0;
+    const solvedPuzzle = solveSudoku(puzzle);
+
+  const removalCount = 40;
+  for (let i = 0; i < removalCount; i++) {
+    let row = Math.floor(Math.random() * 9);
+    let col = Math.floor(Math.random() * 9);
+    while (solvedPuzzle[row][col] === 0) {  // ★ puzzle → solvedPuzzle
+      row = Math.floor(Math.random() * 9);
+      col = Math.floor(Math.random() * 9);
     }
-  
-    return puzzle
+    solvedPuzzle[row][col] = 0;  // ★ puzzle → solvedPuzzle
+  }
+
+  return solvedPuzzle;
   }
   
 module.exports = { solveSudoku, isValidPuzzle, generateRandomPuzzle };
