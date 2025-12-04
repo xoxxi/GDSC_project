@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { solveSudoku, isValidPuzzle } = require('./sudokuSolver');
+const { solveSudoku, isValidPuzzle, generateRandomPuzzle } = require('./sudokuSolver');
 
 const app = express();
 app.use(cors({
