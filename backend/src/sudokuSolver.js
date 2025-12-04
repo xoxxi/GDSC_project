@@ -89,7 +89,7 @@ function isValidPuzzle(puzzle) {
     }
   }
   
-  /* function generateRandomPuzzle() {
+  function generateRandomPuzzle() {
     const puzzle = Array.from({ length: 9 }, () => Array(9).fill(0));
   
     function fillDiagonal() {
@@ -131,6 +131,6 @@ function isValidPuzzle(puzzle) {
     }
   
     return JSON.stringify(puzzle);
-  } */
+  }
   
   module.exports = { solveSudoku, isValidPuzzle };
