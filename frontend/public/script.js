@@ -77,15 +77,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // 스도쿠 퍼즐을 화면에 표시하는 함수
   function displayPuzzle(puzzle) {
-    const tableBody = document.getElementById('sudoku-table-body');
-    const rows = tableBody.querySelectorAll('tr');
-    rows.forEach((row, rowIndex) => {
-      const cells = row.querySelectorAll('input');
-      cells.forEach((cell, colIndex) => {
-        cell.value = puzzle[rowIndex][colIndex] === 0 ? '' : puzzle[rowIndex][colIndex];
-      });
+  console.log('displayPuzzle called with:', puzzle);  // 디버깅 추가
+  const tableBody = document.getElementById('sudoku-table-body');
+  console.log('tableBody:', tableBody);  // 디버깅 추가
+  const rows = tableBody.querySelectorAll('tr');
+  console.log('rows count:', rows.length);  // 디버깅 추가
+  
+  rows.forEach((row, rowIndex) => {
+    const cells = row.querySelectorAll('input');
+    console.log(`Row ${rowIndex}, cells count:`, cells.length);  // 디버깅 추가
+    cells.forEach((cell, colIndex) => {
+      const value = puzzle[rowIndex][colIndex] === 0 ? '' : puzzle[rowIndex][colIndex];
+      console.log(`Setting cell [${rowIndex}][${colIndex}] to:`, value);  // 디버깅 추가
+      cell.value = value;
     });
-  }
+  });
+  console.log('Puzzle displayed successfully');  // 디버깅 추가
+}
 
   // 스도쿠 해답을 화면에 표시하는 함수
   function displaySolution(solution) {
