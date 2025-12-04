@@ -13,3 +13,6 @@ Frontend: JavaScript, HTML, CSS
 Backend: Node.js
 
 Algorithm: Backtracking (DFS 기반)
+
+
+<img width="442" height="797" alt="image" src="https://github.com/user-attachments/assets/1cc463cf-5cec-42b3-bbc8-e3c0e9c4c260" />
